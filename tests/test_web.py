@@ -16,8 +16,7 @@ def test_login_scenario_using_tasks(browser):
     print("The name of the actor is -> " + actor.name)
     """
     - has() -> returns a boolean based on the lookup
-      of a key in a dictionary e.g. the Actor was 
-      assigned the browser ability  
+      of a key in a dictionary 
     """
     print("Actor has the browser ability -> " + str(actor.has("browser")))
     # Tasks

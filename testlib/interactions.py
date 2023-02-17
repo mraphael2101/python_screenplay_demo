@@ -1,4 +1,4 @@
-from requests import Session, Response
+from requests import Response, Session
 from screenplay.pattern import Actor, Task, Question
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
