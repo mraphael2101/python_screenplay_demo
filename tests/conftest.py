@@ -49,9 +49,10 @@ def browser(config: dict) -> WebDriver:
 @pytest.fixture
 def http_library(config: dict) -> Session:
     """
-    Using the Session concept from the requests library will enforce that
-    all events are applied to any subsequent request that uses the same
-    Session object
+    A Session object allows one to persist certain parameters across requests.
+    It also persists cookies across all requests made from the Session instance.
+    So, if several requests are being made to the same host, the underlying TCP
+    connection will be reused, which can result in a significant performance increase
     """
     if config['http_library'].lower() == 'requests':
         session = requests.Session()

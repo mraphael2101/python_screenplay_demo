@@ -30,7 +30,7 @@ def test_login_scenario_using_tasks(browser):
 @pytest.mark.regression
 def test_label_validation_with_questions(browser) -> None:
     actor = Actor("Mark")
-    actor.can_use(browser=browser)
+    actor.can_use(browser=browser)  # Without this you cannot manipulate Selenium
     # Tasks
     actor.attempts_to(Load(BtHomePage.URL))
     actor.attempts_to(HandleCookiePolicyOnHomePage())

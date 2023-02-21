@@ -14,7 +14,7 @@ This module contains web UI interactions for BT.com
 
 
 class LabelAttribute(Question[str]):
-    def __init__(self, by: By, query: str) -> None:
+    def __init__(self, by: By, query: str):
         self.by = by
         self.query = query
 
@@ -26,7 +26,7 @@ class LabelAttribute(Question[str]):
 
 
 class TextListFor(Question[list[str]]):
-    def __init__(self, by: By, query: str) -> None:
+    def __init__(self, by: By, query: str):
         self.by = by
         self.query = query
 
@@ -44,7 +44,7 @@ class Title(Question[str]):
 
 
 class CallReqResApi(Question[str]):
-    def __init__(self, url: str) -> None:
+    def __init__(self, url: str):
         self.url = url
 
     def request_as(self, actor: Actor) -> Response:
@@ -56,7 +56,7 @@ class CallReqResApi(Question[str]):
 # Tasks
 
 class Load(Task):
-    def __init__(self, url: str) -> None:
+    def __init__(self, url: str):
         self.url = url
 
     def perform_as(self, actor: Actor) -> None:
@@ -74,7 +74,7 @@ class HandleCookiePolicyOnHomePage(Task):
 
 
 class NavigateFromHomePageTo(Task):
-    def __init__(self, option: str) -> None:
+    def __init__(self, option: str):
         self.option = option.lower()
 
     def perform_as(self, actor: Actor) -> None:
