@@ -40,3 +40,5 @@ def test_label_validation_with_questions(browser) -> None:
     assert "Postcode" in caption
     # Question -> Same concept as line 34 but uses a different wording
     # actor.calls()
+
+
