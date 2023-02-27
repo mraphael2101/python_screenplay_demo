@@ -21,3 +21,8 @@ class BTLoginPage:
     USERNAME_INPUT = (By.XPATH, "//input[@name='USER']")
     PASSWORD_INPUT = (By.NAME, "NAFMPASSWORD")
     LOGIN_BTN = (By.XPATH, "//input[@value='Log in to My BT']")
+
+
+class ReqResApiModel:
+    BASE_URI = "https://reqres.in"
+    BASE_URI_INVALID = "https://fictitious"

@@ -2,7 +2,7 @@ import pytest
 from screenplay.pattern import Actor
 
 from testlib.interactions import CallReqResApi, Load
-from testlib.pages import BtHomePage
+from testlib.pages import BtHomePage, ReqResApiModel
 
 
 @pytest.mark.regression
@@ -32,13 +32,9 @@ def test_e2e_with_multiple_actors(browser, http_library) -> None:
     print(response)
 
 
-base_uri = "https://reqres.in"
-base_uri_invalid = "https://fictitious"
-
-
 @pytest.mark.regression
-@pytest.mark.parametrize('end_point_variances', [base_uri + "/api/users?page=2",
-                                                 base_uri_invalid + "/api/users?page=2",
+@pytest.mark.parametrize('end_point_variances', [ReqResApiModel.BASE_URI + "/api/users?page=2",
+                                                 ReqResApiModel.BASE_URI_INVALID + "/api/users?page=2",
                                                  ])
 def test_end_points_with_params(http_library, end_point_variances: str) -> None:
     actor = Actor("Alex")
