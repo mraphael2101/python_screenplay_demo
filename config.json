@@ -1,4 +1,4 @@
 {
     "http_library": "requests",
-    "browser": "Chrome"
+    "browser": "Firefox"
 }

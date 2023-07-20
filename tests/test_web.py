@@ -1,7 +1,7 @@
 import pytest
 
 from testlib.interactions import *
-from testlib.pages import BtHomePage
+from testlib.models import BtHomePage
 
 
 @pytest.mark.regression

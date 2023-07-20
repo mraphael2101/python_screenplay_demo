@@ -2,7 +2,7 @@ import pytest
 from screenplay.pattern import Actor
 
 from testlib.interactions import CallReqResApi, Load
-from testlib.pages import BtHomePage, ReqResApiModel
+from testlib.models import BtHomePage, ReqResApiModel
 
 
 @pytest.mark.regression

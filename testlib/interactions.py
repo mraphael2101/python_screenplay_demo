@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from testlib.pages import BtHomePage, BTLoginPage
+from testlib.models import BtHomePage, BTLoginPage
 
 """
 This module contains web UI interactions for BT.com

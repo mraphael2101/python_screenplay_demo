@@ -23,7 +23,7 @@ urllib3==1.26.10
 wsproto==1.1.0
 
 
-selenium==4.3.0
+selenium==4.10.0
 requests==2.28.2
 pytest==7.1.2
 screenplay==0.1.5
