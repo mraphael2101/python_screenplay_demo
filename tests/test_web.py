@@ -20,7 +20,15 @@ def test_login_scenario_using_tasks(browser):
     """
     print("Actor has the browser ability -> " + str(actor.has("browser")))
     # Tasks
+
+    """
+    IMPORTANT DISTINCTION BETWEEN SCREENPLAY AND PAGE OBJECTS
+    This Load Task performs an action which can be on any target Model.
+    i.e. it is not a mild separation of concerns as the interaction code 
+    is not coupled with the structure of the page object
+    """
     actor.attempts_to(Load(BtHomePage.URL))
+
     actor.attempts_to(HandleCookiePolicyOnHomePage())
     actor.attempts_to(NavigateFromHomePageTo("My BT"))
     actor.attempts_to(VerifyResultPageTitleContains("Login Page"))
